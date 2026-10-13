@@ -1,0 +1,22 @@
+{% load static i18n %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build your skills, understand what is getting in the way, and find your way forward with Progrez.">
+  <title>Progrez — Your learning journey</title>
+  <link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'app.css' %}?v=courses-20261013">
+  <link rel="stylesheet" href="{% static 'circle.css' %}?v=courses-20261013">
+  <script src="{% static 'circle.js' %}?v=courses-20261013" defer></script>
+  <script src="{% static 'app.js' %}?v=courses-20261013" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">{% translate 'Skip to content' %}</a>
+  <div id="app"><main class="initial"><span class="brand">progrez<span>®</span></span><p>{% translate 'Opening your learning space…' %}</p></main></div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="confirm"><form method="dialog"><h2>Reset this demo learner?</h2><p>This removes this demo learner’s progress and recovery history for the selected course and restores the starting scenario. Other courses and learners are unaffected.</p><div class="actions"><button value="cancel" class="secondary">Keep progress</button><button value="reset" class="primary">Reset demo</button></div></form></dialog>
+  <noscript>Progrez needs JavaScript for interactive learning. Enable it and reload this page.</noscript>
+</body>
+</html>
